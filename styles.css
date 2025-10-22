@@ -1,0 +1,181 @@
+/* --- RESET BÁSICO --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #0d47a1, #512da8);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* --- HEADER --- */
+header {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(5px);
+}
+
+/* Avatar y nombre */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* Redes sociales */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1); /* hace que el icono sea blanco */
+  transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Navegación */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.tab-button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+/* Oculta secciones no activas */
+.hidden {
+  display: none;
+}
+
+/* --- BLOQUES DE ENLACES --- */
+.block.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  color: #000;
+  border-radius: 14px;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.link-item img {
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.link-item .text h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #2196f3, #9c27b0); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link-item .text p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* --- BLOQUE DE VIDEO --- */
+.block.video {
+  padding: 1rem;
+}
+
+.block.video iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 768px) {
+  .link-item {
+    flex-direction: row;
+    padding: 0.5rem;
+  }
+
+  .link-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .link-item .text h2 {
+    font-size: 1.1rem;
+  }
+
+  .link-item .text p {
+    font-size: 0.8rem;
+  }
+
+  .block.video iframe {
+    height: 200px;
+  }
+
+  .header-top {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+}
