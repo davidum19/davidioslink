@@ -39,8 +39,8 @@ header {
 }
 
 .avatar {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #fff;
@@ -50,13 +50,13 @@ header {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   margin-bottom: 0.5rem;
 }
 
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 48px;
+  height: 48px;
   filter: invert(1); /* hace que el icono sea blanco */
   transition: transform 0.2s;
 }
@@ -76,12 +76,13 @@ header {
 .tab-button {
   background: rgba(255,255,255,0.2);
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.8rem;
   border-radius: 10px;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
+  font-size: 1rem;
 }
 
 .tab-button.active,
