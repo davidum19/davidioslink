@@ -60,7 +60,7 @@ header {
 .social-icons img {
   width: 48px;
   height: 48px;
-  filter: invert(1); /* hace que el icono sea blanco */
+   /* hace que el icono sea blanco */
   transition: transform 0.2s;
 }
 
