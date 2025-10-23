@@ -90,6 +90,12 @@ header {
   background: rgba(255,255,255,0.5);
 }
 
+.native-banner{
+  margin: 20px auto;
+  text-align: center;
+
+}
+
 /* Oculta secciones no activas */
 .hidden {
   display: none;
