@@ -5,7 +5,9 @@
   box-sizing: border-box;
 }
 
-
+.h2{
+  text-align: center;
+}
 
 /* Disclaimer al final de cada sección */
 .disclaimer {
