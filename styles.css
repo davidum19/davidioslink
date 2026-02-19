@@ -204,4 +204,38 @@ header {
   .tabs {
     flex-wrap: wrap;
   }
+  
 }
+/* ============================= */
+/* ====== MEJORA SOLO DESKTOP ====== */
+/* ============================= */
+
+@media (min-width: 1024px) {
+
+  /* Contenedor central */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Más aire vertical */
+  .block.links {
+    padding: 1.5rem 0;
+  }
+
+  /* Links un poco más elegantes */
+  .link-item {
+    padding: 1rem 1.2rem;
+  }
+
+  /* Video más proporcionado en desktop */
+  .block.video iframe {
+    height: 480px;
+  }
+   header {
+    padding-top: 2.1rem;
+    padding-bottom: 2rem;
+  }
+
+}
+
