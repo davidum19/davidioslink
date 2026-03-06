@@ -75,7 +75,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.7rem;
   margin-top: 1rem;
   flex-wrap: nowrap;
 }
@@ -90,6 +90,7 @@ header {
   cursor: pointer;
   transition: background 0.3s;
   font-size: 1rem;
+  white-space: nowrap;
 }
 
 .tab-button.active,
