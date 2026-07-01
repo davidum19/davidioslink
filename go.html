@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continuar - David iOS</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.unlock-page {
+      padding-top: 0;
+      background: #f5f7fb;
+      color: #202124;
+      min-height: 100svh;
+    }
+
+    .unlock-header {
+      background: linear-gradient(135deg, #e62117, #ff4b36);
+      color: #fff;
+      padding: calc(1rem + env(safe-area-inset-top)) 1rem 1rem;
+      text-align: center;
+    }
+
+    .unlock-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: clamp(1.35rem, 6vw, 1.8rem);
+      font-weight: 800;
+    }
+
+    .unlock-brand img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.8);
+    }
+
+    .unlock-shell {
+      width: min(92vw, 560px);
+      margin: clamp(1rem, 4vw, 2rem) auto;
+      padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+    }
+
+    .unlock-card {
+      background: #fff;
+      border: 1px solid #e2e5ea;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(30, 41, 59, 0.12);
+      padding: clamp(1.1rem, 4vw, 1.6rem);
+    }
+
+    .unlock-title {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.85rem;
+      color: #252934;
+    }
+
+    .unlock-icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #fff0ef;
+      color: #e62117;
+      font-size: 1.35rem;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+
+    .unlock-title h1 {
+      font-size: clamp(1.35rem, 6vw, 1.95rem);
+      line-height: 1.15;
+    }
+
+    .unlock-copy {
+      color: #626b7a;
+      font-size: clamp(0.98rem, 4vw, 1.08rem);
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+    }
+
+    .unlock-step {
+      border: 1px solid #d8dde6;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.1rem;
+      background: #fbfcff;
+    }
+
+    .unlock-step strong {
+      display: block;
+      color: #333846;
+      font-size: clamp(1rem, 4vw, 1.08rem);
+      margin-bottom: 0.25rem;
+    }
+
+    .unlock-step span {
+      color: #7a8392;
+      font-size: clamp(0.9rem, 3.6vw, 0.98rem);
+      line-height: 1.45;
+    }
+
+    .unlock-actions {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .unlock-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      border: 0;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      font-size: clamp(0.96rem, 3.8vw, 1rem);
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+    }
+
+    .unlock-button:hover {
+      transform: translateY(-1px);
+    }
+
+    .unlock-button.subscribe {
+      background: #e62117;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(230, 33, 23, 0.25);
+    }
+
+    .unlock-button.continue {
+      background: #45ad4d;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(69, 173, 77, 0.22);
+    }
+
+    .unlock-button.secondary {
+      background: #eef2f7;
+      color: #455063;
+    }
+
+    .unlock-button:disabled {
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+      opacity: 0.55;
+    }
+
+    .unlock-footnote {
+      color: #7b8494;
+      font-size: 0.85rem;
+      line-height: 1.45;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .unlock-error {
+      display: none;
+      color: #b42318;
+      background: #fff1f0;
+      border: 1px solid #ffccc7;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .unlock-shell {
+        margin: 1.25rem auto;
+      }
+
+      .unlock-card {
+        padding: 1.1rem;
+      }
+
+      .unlock-brand img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .unlock-title {
+        align-items: flex-start;
+      }
+
+      .unlock-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body class="unlock-page">
+  <header class="unlock-header">
+    <div class="unlock-brand">
+      <img src="avatar.jpeg" alt="David iOS">
+      <span>David iOS</span>
+    </div>
+  </header>
+
+  <main class="unlock-shell">
+    <div class="unlock-error" id="unlockError">
+      Este enlace no existe o fue escrito incorrectamente. Vuelve a la página principal e intenta de nuevo.
+    </div>
+
+    <section class="unlock-card">
+      <div class="unlock-title">
+        <div class="unlock-icon">1</div>
+        <h1>Antes de continuar</h1>
+      </div>
+
+      <p class="unlock-copy">
+        Apoya al canal suscribiéndote. Gracias por tu apoyo ♥️. Gracias a eso puedo seguir compartiendo tutoriales y apps para iPhone.
+      </p>
+
+      <div class="unlock-step">
+        <strong id="linkTitle">Delta</strong>
+        <span>Toca el botón rojo, suscríbete al canal y luego regresa aquí para continuar.</span>
+      </div>
+
+      <div class="unlock-actions">
+        <a class="unlock-button subscribe" id="subscribeButton" href="https://www.youtube.com/channel/UCa80EH77vymRyS37bAi_F9A?sub_confirmation=1" target="_blank" rel="noopener">
+          Suscribirme al canal
+        </a>
+        <button class="unlock-button continue" id="continueButton" type="button" disabled>
+          Primero apoya el canal
+        </button>
+        <a class="unlock-button secondary" href="index.html">
+          Volver a David iOS
+        </a>
+      </div>
+
+      
+    </section>
+  </main>
+
+  <script>
+    const links = {
+      "delta-ipa": {
+        title: "Delta 2.727.1199 iPA",
+        url: "https://loot-link.com/s?HU3xTRfz"
+      },
+      "delta-nuevo": {
+        title: "Delta 2.727.1199 NUEVO - Moving Increasingly",
+        url: "https://lootdest.org/s?jZ8rKRtp"
+      },
+      "delta-telecom": {
+        title: "Delta 2.727.1199 - China Telecom Corp. Limited",
+        url: "https://lootdest.org/s?tYR7yrkE"
+      },
+      "delta-aramco": {
+        title: "Delta 2.727.1199 - Aramco Services Company",
+        url: "https://lootdest.org/s?lP3dIG3k"
+      },
+      "delta-beijing": {
+        title: "Delta 2.727.1199 - Beijing Zhizhangyi Inc",
+        url: "https://loot-link.com/s?wcRcUJvJ"
+      },
+      "delta-national": {
+        title: "Delta 2.727.1199 - National Oilwell Varco, Inc",
+        url: "https://lootdest.org/s?SMeY2K6k"
+      },
+      "delta-forevermark": {
+        title: "Delta 2.727.1199 - Forevermark Marketing Limited",
+        url: "https://loot-link.com/s?G4WDESGF"
+      },
+      "delta-powerchina": {
+        title: "Delta 2.727.1199 - PowerChina International Group Limited",
+        url: "https://loot-link.com/s?6ZEHlDaT"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const selectedLink = links[id];
+    const title = document.getElementById("linkTitle");
+    const error = document.getElementById("unlockError");
+    const continueButton = document.getElementById("continueButton");
+    const subscribeButton = document.getElementById("subscribeButton");
+
+    if (!selectedLink) {
+      error.style.display = "block";
+      continueButton.disabled = true;
+      continueButton.textContent = "Enlace no disponible";
+      continueButton.style.background = "#9aa3b2";
+    } else {
+      title.textContent = selectedLink.title;
+    }
+
+    subscribeButton.addEventListener("click", () => {
+      continueButton.disabled = false;
+      continueButton.textContent = "Continuar al enlace";
+    });
+
+    continueButton.addEventListener("click", () => {
+      if (!selectedLink) return;
+      window.location.href = selectedLink.url;
+    });
+  </script>
+</body>
+</html>
