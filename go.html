@@ -295,13 +295,13 @@
     subscribeButton.addEventListener("click", () => {
       let secondsLeft = 5;
       continueButton.disabled = true;
-      continueButton.textContent = "Espera 5 segundos...";
+      continueButton.textContent = "Esperando...";
 
       const countdown = setInterval(() => {
         secondsLeft -= 1;
 
         if (secondsLeft > 0) {
-          continueButton.textContent = "Espera " + secondsLeft + " segundos...";
+          continueButton.textContent = "Esperando...";
           return;
         }
 
