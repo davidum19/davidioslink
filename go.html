@@ -293,8 +293,22 @@
     }
 
     subscribeButton.addEventListener("click", () => {
-      continueButton.disabled = false;
-      continueButton.textContent = "Continuar al enlace";
+      let secondsLeft = 5;
+      continueButton.disabled = true;
+      continueButton.textContent = "Espera 5 segundos...";
+
+      const countdown = setInterval(() => {
+        secondsLeft -= 1;
+
+        if (secondsLeft > 0) {
+          continueButton.textContent = "Espera " + secondsLeft + " segundos...";
+          return;
+        }
+
+        clearInterval(countdown);
+        continueButton.disabled = false;
+        continueButton.textContent = "Continuar al enlace";
+      }, 1000);
     });
 
     continueButton.addEventListener("click", () => {
