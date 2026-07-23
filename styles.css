@@ -370,7 +370,10 @@ header::after {
 .link-item[href*="api.khoindvn.io.vn"],
 .link-item[href*="Delt4-OTA"],
 .link-item[href*="Scarlet-OTA"],
-.link-item[href*="Ksign-OTA"] {
+.link-item[href*="Ksign-OTA"],
+.link-item[href*=".mobileconfig"],
+.link-item[href*="lootdest.org"],
+.link-item[href*="loot-link.com"] {
   padding-right: 8.5rem;
 }
 
@@ -380,7 +383,10 @@ header::after {
 .link-item[href*="api.khoindvn.io.vn"] .text::after,
 .link-item[href*="Delt4-OTA"] .text::after,
 .link-item[href*="Scarlet-OTA"] .text::after,
-.link-item[href*="Ksign-OTA"] .text::after {
+.link-item[href*="Ksign-OTA"] .text::after,
+.link-item[href*=".mobileconfig"] .text::after,
+.link-item[href*="lootdest.org"] .text::after,
+.link-item[href*="loot-link.com"] .text::after {
   content: "Instalar";
   position: absolute;
   top: 50%;
@@ -506,7 +512,10 @@ header::after {
   .link-item[href*="api.khoindvn.io.vn"],
   .link-item[href*="Delt4-OTA"],
   .link-item[href*="Scarlet-OTA"],
-  .link-item[href*="Ksign-OTA"] {
+  .link-item[href*="Ksign-OTA"],
+  .link-item[href*=".mobileconfig"],
+  .link-item[href*="lootdest.org"],
+  .link-item[href*="loot-link.com"] {
     padding-right: 0.68rem;
   }
 
@@ -516,7 +525,10 @@ header::after {
   .link-item[href*="api.khoindvn.io.vn"] .text::after,
   .link-item[href*="Delt4-OTA"] .text::after,
   .link-item[href*="Scarlet-OTA"] .text::after,
-  .link-item[href*="Ksign-OTA"] .text::after {
+  .link-item[href*="Ksign-OTA"] .text::after,
+  .link-item[href*=".mobileconfig"] .text::after,
+  .link-item[href*="lootdest.org"] .text::after,
+  .link-item[href*="loot-link.com"] .text::after {
     position: static;
     transform: none;
     display: inline-flex;
@@ -593,7 +605,10 @@ header::after {
   .link-item[href*="api.khoindvn.io.vn"],
   .link-item[href*="Delt4-OTA"],
   .link-item[href*="Scarlet-OTA"],
-  .link-item[href*="Ksign-OTA"] {
+  .link-item[href*="Ksign-OTA"],
+  .link-item[href*=".mobileconfig"],
+  .link-item[href*="lootdest.org"],
+  .link-item[href*="loot-link.com"] {
     padding-right: 9rem;
   }
 
