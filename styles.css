@@ -397,6 +397,17 @@ header::after {
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
+.badge-emulator {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(106, 224, 126, 0.94)),
+    rgba(106, 224, 126, 0.78);
+  color: #08210d;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.32),
+    0 8px 22px rgba(106, 224, 126, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
 .link-item[href^="itms-services"],
 .link-item[href^="go.html"],
 .link-item[href*="loadly.io"],
