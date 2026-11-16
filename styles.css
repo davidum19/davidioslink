@@ -397,6 +397,17 @@ header::after {
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
+.badge-no-pc {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(230, 183, 75, 0.96)),
+    rgba(230, 183, 75, 0.82);
+  color: #241804;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.32),
+    0 8px 22px rgba(230, 183, 75, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
 .badge-emulator {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(106, 224, 126, 0.94)),
